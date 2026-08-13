@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="refresh" content="300">
+<title>Shop Floor Leaderboard</title>
+<style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+        background: linear-gradient(160deg, #0f1420 0%, #1a2236 100%);
+        color: #fff;
+        font-family: 'Segoe UI', Arial, sans-serif;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        padding: 40px 60px;
+    }
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+        border-bottom: 3px solid #2e3b57;
+        padding-bottom: 20px;
+        margin-bottom: 20px;
+    }
+    h1 {
+        font-size: 3vw;
+        letter-spacing: 1px;
+        color: #ffcc33;
+    }
+    .subtitle {
+        font-size: 1.3vw;
+        color: #8fa0c0;
+    }
+    .board {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        gap: 14px;
+        justify-content: center;
+    }
+    .row {
+        display: grid;
+        grid-template-columns: 100px 1fr 200px;
+        align-items: center;
+        background: rgba(255,255,255,0.05);
+        border-radius: 14px;
+        padding: 18px 30px;
+        font-size: 2vw;
+    }
+    .rank-1 { background: linear-gradient(90deg, rgba(255,204,51,0.25), rgba(255,255,255,0.05)); font-size: 2.6vw; }
+    .rank-2 { background: linear-gradient(90deg, rgba(200,200,200,0.2), rgba(255,255,255,0.05)); }
+    .rank-3 { background: linear-gradient(90deg, rgba(205,127,50,0.2), rgba(255,255,255,0.05)); }
+    .rank { text-align: center; font-weight: bold; color: #ffcc33; }
+    .name { font-weight: 600; text-transform: capitalize; }
+    .qty { text-align: right; font-weight: bold; color: #7CFFB2; }
+    footer {
+        text-align: right;
+        color: #5c6d8f;
+        font-size: 1vw;
+        margin-top: 20px;
+    }
+</style>
+</head>
+<body>
+    <header>
+        <h1>Shop Floor Leaderboard</h1>
+        <div class="subtitle">Today's Units Completed</div>
+    </header>
+    <div class="board">
+        
+        <div class="row rank-1">
+            <div class="rank">🥇</div>
+            <div class="name">b.fagan</div>
+            <div class="qty">575</div>
+        </div>
+        <div class="row rank-2">
+            <div class="rank">🥈</div>
+            <div class="name">l.wilson</div>
+            <div class="qty">255</div>
+        </div>
+        <div class="row rank-3">
+            <div class="rank">🥉</div>
+            <div class="name">j.hammonds</div>
+            <div class="qty">91</div>
+        </div>
+        <div class="row rank-4">
+            <div class="rank">4</div>
+            <div class="name">d.jarrell</div>
+            <div class="qty">31</div>
+        </div>
+        <div class="row rank-5">
+            <div class="rank">5</div>
+            <div class="name">j.renfroe</div>
+            <div class="qty">26</div>
+        </div>
+        <div class="row rank-6">
+            <div class="rank">6</div>
+            <div class="name">j.garcia</div>
+            <div class="qty">24</div>
+        </div>
+        <div class="row rank-7">
+            <div class="rank">7</div>
+            <div class="name">d.loggins</div>
+            <div class="qty">13</div>
+        </div>
+        <div class="row rank-8">
+            <div class="rank">8</div>
+            <div class="name">c.scalf</div>
+            <div class="qty">12</div>
+        </div>
+        <div class="row rank-9">
+            <div class="rank">9</div>
+            <div class="name">j.revis</div>
+            <div class="qty">8</div>
+        </div>
+        <div class="row rank-10">
+            <div class="rank">10</div>
+            <div class="name">b.woodall</div>
+            <div class="qty">5</div>
+        </div>
+        <div class="row rank-11">
+            <div class="rank">11</div>
+            <div class="name">j.peterson</div>
+            <div class="qty">5</div>
+        </div>
+        <div class="row rank-12">
+            <div class="rank">12</div>
+            <div class="name">j.presley</div>
+            <div class="qty">5</div>
+        </div>
+        <div class="row rank-13">
+            <div class="rank">13</div>
+            <div class="name">j.thompson</div>
+            <div class="qty">4</div>
+        </div>
+        <div class="row rank-14">
+            <div class="rank">14</div>
+            <div class="name">g.binkley</div>
+            <div class="qty">2</div>
+        </div>
+        <div class="row rank-15">
+            <div class="rank">15</div>
+            <div class="name">i.shulhan</div>
+            <div class="qty">1</div>
+        </div>
+        <div class="row rank-16">
+            <div class="rank">16</div>
+            <div class="name">j.reyna</div>
+            <div class="qty">1</div>
+        </div>
+    </div>
+    <footer>Updated Thursday, August 13 2026 — 04:07 PM</footer>
+</body>
+</html>
