@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="refresh" content="300">
+<title>Job Progress by Station</title>
+<style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+        background: linear-gradient(160deg, #0f1420 0%, #1a2236 100%);
+        color: #fff;
+        font-family: 'Segoe UI', Arial, sans-serif;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        padding: 40px 60px;
+    }
+    header {
+        border-bottom: 3px solid #2e3b57;
+        padding-bottom: 20px;
+        margin-bottom: 30px;
+    }
+    h1 {
+        font-size: 3vw;
+        letter-spacing: 1px;
+        color: #ffcc33;
+    }
+    .overall-row {
+        margin-bottom: 40px;
+        background: rgba(255,255,255,0.06);
+        border-radius: 16px;
+        padding: 20px 30px;
+    }
+    .overall-label {
+        font-size: 1.6vw;
+        font-weight: 600;
+        margin-bottom: 10px;
+        color: #cdd8f0;
+    }
+    .overall-track { height: 34px; }
+    .overall-pct {
+        text-align: right;
+        font-size: 1.6vw;
+        font-weight: bold;
+        margin-top: 8px;
+    }
+    .board {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        gap: 22px;
+        justify-content: center;
+    }
+    .station-row {
+        display: grid;
+        grid-template-columns: 260px 1fr 110px;
+        align-items: center;
+        gap: 20px;
+    }
+    .station-label {
+        display: flex;
+        flex-direction: column;
+    }
+    .station-name {
+        font-size: 1.7vw;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
+    .station-count {
+        font-size: 1vw;
+        color: #8fa0c0;
+    }
+    .bar-track {
+        background: rgba(255,255,255,0.08);
+        border-radius: 999px;
+        height: 26px;
+        overflow: hidden;
+        position: relative;
+    }
+    .bar-fill {
+        height: 100%;
+        border-radius: 999px;
+        transition: width 0.6s ease;
+    }
+    .station-pct {
+        text-align: right;
+        font-size: 1.6vw;
+        font-weight: bold;
+    }
+    footer {
+        text-align: right;
+        color: #5c6d8f;
+        font-size: 1vw;
+        margin-top: 20px;
+    }
+</style>
+</head>
+<body>
+    <header>
+        <h1>Job Progress by Station</h1>
+    </header>
+    
+        <div class="overall-row">
+            <div class="overall-label">Overall Job Progress</div>
+            <div class="bar-track overall-track">
+                <div class="bar-fill" style="width:31.44%; background:#ff6b6b;"></div>
+            </div>
+            <div class="overall-pct">31.4%</div>
+        </div>
+    <div class="board">
+        
+        <div class="station-row">
+            <div class="station-label">
+                <span class="station-name">Cut</span>
+                <span class="station-count">971 / 1,846</span>
+            </div>
+            <div class="bar-track">
+                <div class="bar-fill" style="width:52.6%; background:#ffcc33;"></div>
+            </div>
+            <div class="station-pct">52.6%</div>
+        </div>
+        <div class="station-row">
+            <div class="station-label">
+                <span class="station-name">Fit</span>
+                <span class="station-count">81 / 470</span>
+            </div>
+            <div class="bar-track">
+                <div class="bar-fill" style="width:17.23%; background:#ff6b6b;"></div>
+            </div>
+            <div class="station-pct">17.2%</div>
+        </div>
+        <div class="station-row">
+            <div class="station-label">
+                <span class="station-name">Fit QC</span>
+                <span class="station-count">44 / 470</span>
+            </div>
+            <div class="bar-track">
+                <div class="bar-fill" style="width:9.36%; background:#ff6b6b;"></div>
+            </div>
+            <div class="station-pct">9.4%</div>
+        </div>
+        <div class="station-row">
+            <div class="station-label">
+                <span class="station-name">Weld</span>
+                <span class="station-count">30 / 240</span>
+            </div>
+            <div class="bar-track">
+                <div class="bar-fill" style="width:12.5%; background:#ff6b6b;"></div>
+            </div>
+            <div class="station-pct">12.5%</div>
+        </div>
+        <div class="station-row">
+            <div class="station-label">
+                <span class="station-name">Weld QC</span>
+                <span class="station-count">30 / 240</span>
+            </div>
+            <div class="bar-track">
+                <div class="bar-fill" style="width:12.5%; background:#ff6b6b;"></div>
+            </div>
+            <div class="station-pct">12.5%</div>
+        </div>
+        <div class="station-row">
+            <div class="station-label">
+                <span class="station-name">Final QC</span>
+                <span class="station-count">50 / 50</span>
+            </div>
+            <div class="bar-track">
+                <div class="bar-fill" style="width:100.0%; background:#7CFFB2;"></div>
+            </div>
+            <div class="station-pct">100.0%</div>
+        </div>
+        <div class="station-row">
+            <div class="station-label">
+                <span class="station-name">Ship</span>
+                <span class="station-count">0 / 520</span>
+            </div>
+            <div class="bar-track">
+                <div class="bar-fill" style="width:0.0%; background:#ff6b6b;"></div>
+            </div>
+            <div class="station-pct">0.0%</div>
+        </div>
+    </div>
+    <footer>Updated Friday, August 14 2026 — 04:15 PM</footer>
+</body>
+</html>
